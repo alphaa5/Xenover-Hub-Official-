@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xenover Hub :: Social Links</title>
+    <!-- Font Awesome for Icons (Requires Internet to load) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Font for a better Title style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-gradient-start: #0c0c16;
+            --bg-gradient-end: #1a1a3d;
+            --text-color: #d0e0ff;
+            --accent-color: #ff33cc;
+            --secondary-color: #00ffcc;
+            --button-bg: rgba(255, 255, 255, 0.05);
+            --button-border: #00ffcc;
+            --button-hover-bg: rgba(0, 255, 204, 0.1);
+            --shadow-color: #00ffcc;
+        }
+
+        body.light-theme {
+            --bg-gradient-start: #e9eefc;
+            --bg-gradient-end: #d5e0ff;
+            --text-color: #1a1a3d;
+            --accent-color: #d9006c;
+            --secondary-color: #008a70;
+            --button-bg: rgba(255, 255, 255, 0.9);
+            --button-border: #1a1a3d50;
+            --button-hover-bg: rgba(26, 26, 61, 0.1);
+            --shadow-color: #1a1a3d;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 80px;
+            min-height: 100vh;
+            padding-left: 20px;
+            padding-right: 20px;
+            box-sizing: border-box;
+            background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+            background-size: 400% 400%;
+            animation: animatedGradient 15s ease infinite;
+            transition: background 0.5s, color 0.5s;
+        }
+
+        @keyframes animatedGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .header {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.8rem;
+            margin: 0 0 40px 0;
+            text-align: center;
+            width: 100%;
+            background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            filter: drop-shadow(0 0 8px var(--accent-color));
+        }
+        
+        #theme-toggle {
+            background: var(--button-bg);
+            border: 1px solid var(--button-border);
+            color: var(--button-border);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        #theme-toggle:hover {
+            box-shadow: 0 0 15px var(--shadow-color);
+            transform: scale(1.1);
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .link-button {
+            display: flex;
+            align-items: center;
+            padding: 15px 25px;
+            background: var(--button-bg);
+            border: 2px solid var(--button-border);
+            border-radius: 12px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s ease-in-out;
+            backdrop-filter: blur(5px);
+        }
+
+        .link-button:hover {
+            background: var(--button-hover-bg);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px 0 var(--shadow-color);
+        }
+
+        .link-button i {
+            font-size: 1.8rem;
+            margin-right: 20px;
+            width: 30px;
+            text-align: center;
+        }
+        
+        .fa-whatsapp { color: #25D366; }
+        .fa-instagram { color: #E4405F; }
+        .fa-telegram { color: #0088cc; }
+        
+        .footer-text {
+            margin-top: 50px;
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body class="dark-theme">
+
+    <div class="header">
+        <button id="theme-toggle">
+            <i class="fas fa-sun"></i>
+        </button>
+    </div>
+
+    <div class="container">
+        
+        <h1>Welcome to<br>Xenover Hub</h1>
+
+        <div class="links-container">
+            <!-- WhatsApp Button -->
+            <a href="https://whatsapp.com/channel/0029Vb69uw7EawdnN1zo5T3u" target="_blank" class="link-button">
+                <i class="fab fa-whatsapp"></i>
+                <span>Join our WhatsApp Channel</span>
+            </a>
+
+            <!-- Instagram Button -->
+            <a href="https://www.instagram.com/xenoverhubofficial?igsh=cWthYnF5ejZkaW1h" target="_blank" class="link-button">
+                <i class="fab fa-instagram"></i>
+                <span>Follow us on Instagram</span>
+            </a>
+
+            <!-- Telegram Button -->
+            <a href="https://t.me/xenoverhubofficial" target="_blank" class="link-button">
+                <i class="fab fa-telegram"></i>
+                <span>Connect on Telegram</span>
+            </a>
+        </div>
+        
+        <p class="footer-text">© 2024 Xenover Hub</p>
+
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const toggleIcon = themeToggle.querySelector('i');
+
+        function setTheme(theme) {
+            if (theme === 'light') {
+                body.classList.add('light-theme');
+                toggleIcon.classList.remove('fa-sun');
+                toggleIcon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.classList.remove('light-theme');
+                toggleIcon.classList.remove('fa-moon');
+                toggleIcon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        setTheme(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            if (body.classList.contains('light-theme')) {
+                setTheme('dark');
+            } else {
+                setTheme('light');
+            }
+        });
+    </script>
+
+</body>
+</html>
